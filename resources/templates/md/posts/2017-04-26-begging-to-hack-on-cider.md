@@ -10,10 +10,20 @@ Emacs normally downloads packages into a directory in `~/.emacs.d/` or somewhere
 ```emacs-lisp
 ;; load local version of cider
 (add-to-list 'load-path "~/projects/cider")
-(load "cider")
+(require 'cider)
 ```
 
 Delete any residual CIDER code left over in your melpa directory so that you know there's only one copy of CIDER running and its a permanent one. (This, in [prelude](https://github.com/bbatsov/prelude) is located at `~/.emacs.d/elpa`).
+
+If you don't have CIDER's dependencies from running it previously from melpa, ensure that the following packages are installed:
+
+- clojure-mode
+- pkg-info
+- queue
+- spinner
+- seq
+
+See the [installation docs](https://cider.readthedocs.io/en/latest/installation/#manual-installation) for more info.
 
 ## Begin Introspecting  ##
 
@@ -95,7 +105,6 @@ Instrumenting code gives you a debugger that's quite extensive. But just remembe
 
 The testing situation in emacs is not, uhh, the best. But there are a few frameworks in use in emacs and CIDER:
 
-- [ert](https://www.gnu.org/software/emacs/manual/html_node/ert/)
 - [buttercup](https://github.com/jorgenschaefer/emacs-buttercup)
 - [cask](https://github.com/cask/cask)
 
@@ -120,6 +129,6 @@ cider|master⚡ ⇒
 
 ## Contributing ##
 
-The above should be enough to get started hacking in CIDER. The issues list always welcomes discussions and questions from new contributors. There's even a bug label `low-hanging fruit` to label things as approachable to those who don't know the code-base very well. Feel free to take issues, fix what bugs you, or contribute to discussions about open issues. The chatroom #cider on [slack](https://clojurians.slack.com/) is a place for help and discussion of feature development.
+The above should be enough to get started hacking in CIDER. The issues list always welcomes discussions and questions from new contributors. There's even a bug label [low-hanging fruit](https://github.com/clojure-emacs/cider/labels/low%20hanging%20fruit) to label things as approachable to those who don't know the code-base very well. Feel free to take issues, fix what bugs you, or contribute to discussions about open issues. The chatroom #cider on [slack](https://clojurians.slack.com/) is a place for help and discussion of feature development.
 
 For pull requests, make sure to follow the following [guidelines](https://github.com/clojure-emacs/cider/blob/master/.github/CONTRIBUTING.md)
