@@ -11,7 +11,7 @@ This site is a static site compiled with [Cryogen](http://cryogenweb.org/index.h
  :toc true}
 ```
 
-The site is located at [www.hackingcider.com](www.hackingcider.com).
+The site is located at [www.hackingcider.com](http://www.hackingcider.com).
 
 ## How to Add ##
 
@@ -20,4 +20,3 @@ Just clone the site and run `lein ring server`. This creates the webserver and s
 To compile the site, just run `lein run` which will create the `resources/public` directory.
 
 If you would like to customize the look of the site, please feel free as it is very basic and could use some visual tweaks.
-
